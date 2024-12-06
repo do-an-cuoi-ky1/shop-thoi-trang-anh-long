@@ -1,0 +1,84 @@
+/* Reset mặc định */
+body, h1, h2, p, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* Nền trắng cho toàn bộ body */
+    color: black;
+}
+
+/* Header */
+header {
+    background-color: black; /* Nền đen chỉ cho header */
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: white; /* Chữ trắng */
+}
+
+/* Main form */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Trừ chiều cao của header */
+}
+
+.form-container {
+    background-color: #f9f9f9; /* Nền sáng cho form */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: black; /* Chữ đen */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    color: black; /* Chữ đen */
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: black; /* Nút màu đen */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555; /* Đổi màu khi rê chuột */
+}
+
+/* Kết quả */
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green; /* Kết quả màu xanh lá */
+}
