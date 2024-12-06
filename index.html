@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CỬA HÀNG THỜI TRANG A LONG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CỬA HÀNG THỜI TRANG A LONG</h1>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Nhập thông tin của bạn</h2>
+            <form id="sizeForm">
+                <label for="height">Chiều cao (cm):</label>
+                <input type="number" id="height" name="height" required>
+
+                <label for="weight">Cân nặng (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+
+                <label for="waist">Vòng eo (cm):</label>
+                <input type="number" id="waist" name="waist" required>
+
+                <label for="legLength">Độ dài chân (cm):</label>
+                <input type="number" id="legLength" name="legLength" required>
+
+                <button type="button" onclick="calculateSize()">Tính size</button>
+            </form>
+            <p id="result"></p>
+        </section>
+    </main>
+</body>
+<script>
+    function calculateSize() {
+        const height = document.getElementById('height').value;
+        const weight = document.getElementById('weight').value;
+        const waist = document.getElementById('waist').value;
+        const legLength = document.getElementById('legLength').value;
+
+        let size = "";
+
+        if (height >= 170 && weight <= 70) {
+            size = "Size M";
+        } else if (height >= 170 && weight > 70) {
+            size = "Size L";
+        } else {
+            size = "Size S";
+        }
+
+        document.getElementById('result').innerText = `Kích cỡ phù hợp của bạn: ${size}`;
+    }
+</script>
+</html>
